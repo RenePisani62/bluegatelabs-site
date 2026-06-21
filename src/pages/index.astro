@@ -1,81 +1,78 @@
 ---
+import Layout from '../layouts/Layout.astro';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BlueGate Labs</title>
+<Layout title="Home">
 
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 1000px;
-        margin: auto;
-        padding: 2rem;
-        background-color: #0f172a;
-        color: #f8fafc;
-      }
+<h1>BlueGate Labs</h1>
 
-      h1 {
-        color: #60a5fa;
-      }
+<h2>Cybersecurity Research & Development</h2>
 
-      nav {
-        margin-bottom: 2rem;
-      }
+<p>
+BlueGate Labs documents practical cybersecurity research, detection engineering,
+cloud security, offensive security labs and software development projects.
+</p>
 
-      nav a {
-        color: #93c5fd;
-        text-decoration: none;
-        margin-right: 20px;
-      }
+<hr>
 
-      .hero {
-        margin-top: 3rem;
-      }
+<h2>Research Areas</h2>
 
-      .card {
-        border: 1px solid #334155;
-        padding: 1rem;
-        border-radius: 10px;
-        margin-top: 1rem;
-      }
-    </style>
-  </head>
+<ul>
+  <li>Detection Engineering</li>
+  <li>Active Directory Security</li>
+  <li>Cloud Security (AWS)</li>
+  <li>Reconnaissance Automation</li>
+  <li>Threat Detection & Monitoring</li>
+</ul>
 
-  <body>
+<hr>
 
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/projects">Projects</a>
-      <a href="/articles">Articles</a>
-      <a href="/contact">Contact</a>
-    </nav>
+<h2>Featured Projects</h2>
 
-    <section class="hero">
-      <h1>BlueGate Labs</h1>
+<div class="project-card">
+  <h3>BlueGate</h3>
+  <p>
+    Windows SIEM and detection engineering platform built using Sysmon telemetry
+    and behavioural detection concepts.
+  </p>
+</div>
 
-      <h2>Cybersecurity Research & Development</h2>
+<div class="project-card">
+  <h3>Recon Pipeline</h3>
+  <p>
+    Automated reconnaissance workflow using Subfinder, HTTPX, Naabu, Nuclei,
+    FFUF and n8n automation.
+  </p>
+</div>
 
-      <p>
-        BlueGate Labs documents practical cybersecurity research,
-        detection engineering, cloud security, and project development.
-      </p>
+<div class="project-card">
+  <h3>PantryPal</h3>
+  <p>
+    Android application focused on reducing food waste through inventory and
+    expiry management.
+  </p>
+</div>
 
-      <div class="card">
-        <h3>Current Projects</h3>
+<hr>
 
-        <ul>
-          <li>BlueGate - Windows SIEM Development</li>
-          <li>Recon Pipeline Automation</li>
-          <li>PantryPal Android Application</li>
-          <li>Gmail Cleaner Automation</li>
-        </ul>
-      </div>
+<h2>Latest Research</h2>
 
-    </section>
+<p>
+Understanding LLMNR Poisoning with Responder: Lessons Learned in a Windows 10/11 Lab
+(Coming Soon)
+</p>
 
-  </body>
-</html>
+<style>
+.project-card {
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  color: #60a5fa;
+}
+</style>
+
+</Layout>

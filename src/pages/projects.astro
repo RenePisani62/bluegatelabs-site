@@ -6,11 +6,51 @@ import Layout from '../layouts/Layout.astro';
 
 <h1>Projects</h1>
 
-<ul>
-  <li>BlueGate - Windows SIEM Development</li>
-  <li>Recon Pipeline - Automated Reconnaissance Workflow</li>
-  <li>PantryPal - Android Food Inventory Application</li>
-  <li>Gmail Cleaner - Gmail Automation Utility</li>
-</ul>
+<div class="project-card">
+  <h2>BlueGate</h2>
+  <p>
+    A Windows SIEM and detection engineering platform currently under development.
+    The project uses Sysmon telemetry, process monitoring and behavioural detection
+    techniques to explore modern defensive security concepts.
+  </p>
+</div>
+
+<div class="project-card">
+  <h2>Recon Pipeline</h2>
+  <p>
+    An automated reconnaissance workflow using tools such as Subfinder, HTTPX,
+    Naabu, Nuclei and FFUF. Designed to assist with legal bug bounty and attack
+    surface discovery activities.
+  </p>
+</div>
+
+<div class="project-card">
+  <h2>PantryPal</h2>
+  <p>
+    An Android application designed to reduce food waste by tracking inventory,
+    expiry dates and household food consumption.
+  </p>
+</div>
+
+<div class="project-card">
+  <h2>Gmail Cleaner</h2>
+  <p>
+    A Python-based Gmail automation utility capable of organising, labelling and
+    cleaning email using the Gmail API.
+  </p>
+</div>
+
+<style>
+.project-card {
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-card h2 {
+    color: #60a5fa;
+}
+</style>
 
 </Layout>

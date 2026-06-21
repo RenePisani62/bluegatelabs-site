@@ -1,23 +1,61 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+const { title } = Astro.props;
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | BlueGate Labs</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 1000px;
+        margin: auto;
+        padding: 2rem;
+        background-color: #0f172a;
+        color: #f8fafc;
+      }
+
+      nav {
+        margin-bottom: 2rem;
+      }
+
+      nav a {
+        color: #93c5fd;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        margin-top: 4rem;
+        padding-top: 1rem;
+        border-top: 1px solid #334155;
+        color: #94a3b8;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/articles">Articles</a>
+      <a href="/contact">Contact</a>
+    </nav>
+
+    <slot />
+
+    <footer>
+      BlueGate Labs © 2026
+    </footer>
+
+  </body>
+</html>

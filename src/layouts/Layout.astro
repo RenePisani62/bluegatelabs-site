@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const { title } = Astro.props;
 ---
 
@@ -8,37 +10,7 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} | BlueGate Labs</title>
 
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        max-width: 1000px;
-        margin: auto;
-        padding: 2rem;
-        background-color: #0f172a;
-        color: #f8fafc;
-      }
-
-      nav {
-        margin-bottom: 2rem;
-      }
-
-      nav a {
-        color: #93c5fd;
-        text-decoration: none;
-        margin-right: 20px;
-      }
-
-      nav a:hover {
-        text-decoration: underline;
-      }
-
-      footer {
-        margin-top: 4rem;
-        padding-top: 1rem;
-        border-top: 1px solid #334155;
-        color: #94a3b8;
-      }
-    </style>
+    
   </head>
 
   <body>

@@ -53,3 +53,11 @@ hr {
     border-top: 1px solid #334155;
     margin: 2rem 0;
 }
+.project-card a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}

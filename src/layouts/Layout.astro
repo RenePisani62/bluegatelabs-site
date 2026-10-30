@@ -1,32 +1,50 @@
+
 ---
 import '../styles/global.css';
 
-const { title } = Astro.props;
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'BlueGate Labs develops practical software applications, cybersecurity solutions and applied technology research.'
+} = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en-AU">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} | BlueGate Labs</title>
 
-    
+    <meta name="description" content={description} />
+
+    <title>{title} | BlueGate Labs</title>
   </head>
 
   <body>
 
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/projects">Projects</a>
-      <a href="/articles">Articles</a>
-      <a href="/contact">Contact</a>
-    </nav>
+    <a class="skip-link" href="#main-content">
+      Skip to main content
+    </a>
 
-    <slot />
+    <header>
+      <nav aria-label="Main navigation">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/articles">Articles</a>
+        <a href="/contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <slot />
+    </main>
 
     <footer>
-      BlueGate Labs © 2026
+      <p>© {new Date().getFullYear()} BlueGate Labs. All rights reserved.</p>
     </footer>
 
   </body>

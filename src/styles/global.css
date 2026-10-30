@@ -1,63 +1,220 @@
+
+/* BlueGate Labs — Global Styles */
+
+:root {
+    color-scheme: dark;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    max-width: 1000px;
-    margin: auto;
-    padding: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
     background-color: #0f172a;
     color: #f8fafc;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Typography */
+
+h1, h2, h3 {
+    line-height: 1.3;
+    margin-top: 0;
 }
 
 h1 {
     color: #60a5fa;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    margin-bottom: 1.5rem;
 }
 
 h2 {
     color: #93c5fd;
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin-bottom: 1.2rem;
+}
+
+h3 {
+    color: #60a5fa;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+a {
+    color: #93c5fd;
+}
+
+a:hover {
+    color: #bfdbfe;
+}
+
+a:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 4px;
+    border-radius: 3px;
+}
+
+/* Header and Navigation */
+
+header {
+    padding: 1.5rem 0;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid #334155;
 }
 
 nav {
-    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 nav a {
     color: #93c5fd;
     text-decoration: none;
-    margin-right: 20px;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
 
-footer {
-    margin-top: 4rem;
-    padding-top: 1rem;
-    border-top: 1px solid #334155;
-    color: #94a3b8;
+/* Main Content */
+
+main {
+    min-height: 60vh;
 }
 
-.project-card {
-    border: 1px solid #334155;
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
+ul {
+    padding-left: 2rem;
 }
 
-.project-card h2,
-.project-card h3 {
-    color: #60a5fa;
+li {
+    margin-bottom: 0.3rem;
 }
 
 hr {
     border: none;
     border-top: 1px solid #334155;
-    margin: 2rem 0;
+    margin: 2.5rem 0;
 }
-.project-card a {
+
+/* Project Cards */
+
+.project-card {
+    background-color: #111c32;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: #60a5fa;
+    transform: translateY(-2px);
+}
+
+.project-card h2,
+.project-card h3 {
     color: #60a5fa;
+    margin-bottom: 0.75rem;
+}
+
+.project-card p:last-child {
+    margin-bottom: 0;
+}
+
+.project-card a {
+    color: #93c5fd;
     text-decoration: none;
 }
 
 .project-card a:hover {
     text-decoration: underline;
+}
+
+/* Footer */
+
+footer {
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid #334155;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Accessibility */
+
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -100px;
+    background: #93c5fd;
+    color: #0f172a;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 1rem;
+}
+
+/* Mobile and Tablet */
+
+@media (max-width: 768px) {
+    body {
+        padding: 0 1.25rem;
+        font-size: 16px;
+    }
+
+    header {
+        padding: 1.25rem 0;
+        margin-bottom: 2rem;
+    }
+
+    nav {
+        gap: 0.75rem 1.25rem;
+    }
+
+    .project-card {
+        padding: 1.25rem;
+    }
+}
+
+/* Reduced Motion Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .project-card,
+    nav a {
+        transition: none;
+    }
+
+    .project-card:hover {
+        transform: none;
+    }
 }

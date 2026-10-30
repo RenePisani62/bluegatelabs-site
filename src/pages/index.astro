@@ -1,78 +1,229 @@
+
 ---
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Home">
+<Layout
+  title="Home"
+  description="BlueGate Labs develops practical software applications, cybersecurity tools and applied technology research in Australia."
+>
+  <section class="hero">
+    <p class="eyebrow">INDEPENDENT AUSTRALIAN DEVELOPMENT</p>
 
-<h1>BlueGate Labs</h1>
+    <h1>BlueGate Labs</h1>
 
-<h2>Cybersecurity Research & Development</h2>
+    <h2>Software Engineering & Cybersecurity</h2>
 
-<p>
-BlueGate Labs documents practical cybersecurity research, detection engineering,
-cloud security, offensive security labs and software development projects.
-</p>
+    <p class="intro">
+      Building practical software solutions, security technologies
+      and intelligent automation to solve real-world problems.
+    </p>
 
-<hr>
+    <p>
+      BlueGate Labs combines independent software development with
+      hands-on cybersecurity engineering and research. Our focus
+      is on useful applications, reliable technology and continuous
+      improvement.
+    </p>
+  </section>
 
-<h2>Research Areas</h2>
+  <hr />
 
-<ul>
-  <li>Detection Engineering</li>
-  <li>Active Directory Security</li>
-  <li>Cloud Security (AWS)</li>
-  <li>Reconnaissance Automation</li>
-  <li>Threat Detection & Monitoring</li>
-</ul>
+  <section aria-labelledby="divisions-heading">
+    <h2 id="divisions-heading">What We Do</h2>
 
-<hr>
+    <div class="division-grid">
+      <article class="division-card">
+        <p class="division-icon" aria-hidden="true">⌘</p>
+        <h3>Software Development</h3>
 
-<h2>Featured Projects</h2>
+        <p>
+          Applications designed to simplify everyday tasks,
+          manage information and improve productivity.
+        </p>
 
-<div class="project-card">
-  <h3>BlueGate</h3>
-  <p>
-    Windows SIEM and detection engineering platform built using Sysmon telemetry
-    and behavioural detection concepts.
-  </p>
-</div>
+        <ul>
+          <li>PantryPal — Food inventory management</li>
+          <li>NDIS Administration — Planned</li>
+          <li>Scrapbook — Planned</li>
+          <li>Receipt & Warranty Management — Planned</li>
+        </ul>
 
-<div class="project-card">
-  <h3>Recon Pipeline</h3>
-  <p>
-    Automated reconnaissance workflow using Subfinder, HTTPX, Naabu, Nuclei,
-    FFUF and n8n automation.
-  </p>
-</div>
+        <a href="/projects">Explore Software Projects →</a>
+      </article>
 
-<div class="project-card">
-  <h3>PantryPal</h3>
-  <p>
-    Android application focused on reducing food waste through inventory and
-    expiry management.
-  </p>
-</div>
+      <article class="division-card">
+        <p class="division-icon" aria-hidden="true">◇</p>
+        <h3>Cybersecurity</h3>
 
-<hr>
+        <p>
+          Security engineering, threat detection, cloud security,
+          automation and practical technical research.
+        </p>
 
-<h2>Latest Research</h2>
+        <ul>
+          <li>BlueGate Security Monitor</li>
+          <li>Reconnaissance Automation</li>
+          <li>Active Directory Security Labs</li>
+          <li>Technical Research & Articles</li>
+        </ul>
 
-<p>
-Understanding LLMNR Poisoning with Responder: Lessons Learned in a Windows 10/11 Lab
-(Coming Soon)
-</p>
+        <a href="/projects">Explore Security Projects →</a>
+      </article>
+    </div>
+  </section>
 
-<style>
-.project-card {
-  border: 1px solid #334155;
-  border-radius: 10px;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  <hr />
+
+  <section aria-labelledby="featured-heading">
+    <h2 id="featured-heading">Featured Projects</h2>
+
+    <div class="featured-grid">
+      <article class="project-card">
+        <h3>PantryPal</h3>
+        <p class="status">Closed Testing</p>
+        <p>
+          Android food inventory and expiry management,
+          with receipt processing and shopping list features.
+        </p>
+        <a href="/projects/pantrypal">View Project →</a>
+      </article>
+
+      <article class="project-card">
+        <h3>BlueGate Security Monitor</h3>
+        <p class="status">In Development</p>
+        <p>
+          Windows security monitoring using Sysmon telemetry,
+          behavioural detection and persistent alert records.
+        </p>
+        <a href="/projects/bluegate">View Project →</a>
+      </article>
+    </div>
+  </section>
+
+  <hr />
+
+  <section aria-labelledby="research-heading">
+    <h2 id="research-heading">Research & Development</h2>
+
+    <p>
+      Our technical work explores detection engineering,
+      Active Directory security, AWS cloud security,
+      reconnaissance automation and network analysis.
+    </p>
+
+    <p>
+      Upcoming research: Understanding LLMNR Poisoning
+      with Responder — Lessons from a Windows 10/11 Lab.
+    </p>
+
+    <a href="/articles">Explore Research Articles →</a>
+  </section>
+
+  <style>
+    .hero {
+  padding: 1rem 0 0;
 }
 
-.project-card h3 {
-  color: #60a5fa;
+.hero p:last-child {
+  margin-bottom: 0;
 }
-</style>
 
+.hero + hr {
+  margin-top: 1.5rem;
+}
+
+    .eyebrow {
+      color: #93c5fd;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    .hero h1 {
+      margin-bottom: 0.5rem;
+    }
+
+    .hero h2 {
+      color: #f8fafc;
+      margin-bottom: 1.5rem;
+    }
+
+    .intro {
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      color: #cbd5e1;
+      max-width: 850px;
+    }
+
+    .division-grid,
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .division-card {
+      background: #111c32;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .division-card h3 {
+      font-size: 1.4rem;
+    }
+
+    .division-icon {
+      color: #60a5fa;
+      font-size: 2rem;
+      margin: 0 0 1rem;
+    }
+
+    .division-card ul {
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .division-card a {
+      margin-top: auto;
+    }
+
+    .status {
+      color: #cbd5e1;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .division-card a,
+    .project-card a,
+    section > a {
+      color: #93c5fd;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .division-card a:hover,
+    .project-card a:hover,
+    section > a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .division-grid,
+      .featured-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 0.5rem;
+      }
+
+      .division-card {
+        padding: 1.25rem;
+      }
+    }
+  </style>
 </Layout>
+

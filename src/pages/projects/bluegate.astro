@@ -2,17 +2,37 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="BlueGate">
 
-<h1>BlueGate</h1>
+<Layout
+  title="BlueGate Windows Security Monitor"
+  description="BlueGate is a Windows security monitoring and detection engineering project using Sysmon, C#, .NET 8, SQLite and MITRE ATT&CK techniques."
+>
 
-<h2>Windows SIEM & Detection Engineering Platform</h2>
+
+
+<h1>BlueGate Security Monitor</h1>
+
+<h2>Windows Security Monitoring & Detection Engineering</h2>
 
 <p>
-BlueGate is a Windows-focused SIEM and detection engineering platform currently
-under development. The project explores Sysmon telemetry, Windows event logging,
-behavioural detection techniques and threat monitoring.
+  BlueGate is a Windows-focused security monitoring application
+  being developed to investigate suspicious system activity
+  using Sysmon telemetry and behavioural detection techniques.
 </p>
+
+<p>
+  Built using C# and .NET 8, the application processes Windows
+  security telemetry, evaluates detection rules and records
+  security alerts in a SQLite database.
+</p>
+
+<p>
+  The project incorporates MITRE ATT&CK-aligned detection logic,
+  including monitoring PowerShell-related outbound network
+  activity. Future development will expand detection coverage,
+  risk scoring and security event investigation capabilities.
+</p>
+
 
 <hr>
 
@@ -24,15 +44,18 @@ Active Development
 
 <hr>
 
+
 <h2>Technology Stack</h2>
 
 <ul>
-    <li>.NET 8</li>
-    <li>Sysmon</li>
-    <li>Windows Event Logs</li>
-    <li>C#</li>
-    <li>GitHub</li>
+  <li>C# and .NET 8</li>
+  <li>Microsoft Windows</li>
+  <li>Sysmon and Windows Event Logs</li>
+  <li>SQLite database</li>
+  <li>MITRE ATT&CK framework</li>
+  <li>Git and GitHub</li>
 </ul>
+
 
 <hr>
 

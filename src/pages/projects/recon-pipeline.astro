@@ -2,24 +2,34 @@
 import Layout from '../../layouts/Layout.astro';
 ---
 
-<Layout title="Recon-Pipeline">
+
+<Layout
+  title="Recon-Pipeline | Security Reconnaissance Automation"
+  description="Explore Recon-Pipeline, a cybersecurity automation project using n8n, Docker, Subfinder, HTTPX, Naabu, Nuclei and FFUF for authorised attack surface discovery."
+>
+
 
 <h1>Recon-Pipeline</h1>
 
-<h2>Bug-bounty reconnaissance pipeline</h2>
+<h2>Automated Reconnaissance & Attack Surface Discovery</h2>
 
 <p>
- An automated reconnaissance workflow using tools such as Subfinder, HTTPX,
-    Naabu, Nuclei and FFUF. Designed to assist with legal bug bounty and attack
-    surface discovery activities.
+  Recon-Pipeline is a cybersecurity automation project designed
+  to streamline reconnaissance activities during authorised
+  security assessments and bug bounty investigations.
 </p>
 
-<hr>
-
-<h2>Current Status</h2>
+<p>
+  The workflow combines open-source security tools with n8n
+  automation and Docker-based services to support subdomain
+  enumeration, live-host identification, port discovery,
+  vulnerability scanning and web content discovery.
+</p>
 
 <p>
-Active Development
+  The project aims to reduce repetitive manual reconnaissance
+  tasks while providing a structured approach to collecting
+  and processing security assessment results.
 </p>
 
 <hr>
@@ -41,7 +51,7 @@ Active Development
 <h2>Project Goals</h2>
 
 <ul>
-    <li>Determine sub-domains from hackerone data</li>
+    <li>Discover subdomains within authorised bug bounty program scopes</li>
     <li>Identify live hosts and web services</li>
     <li>Perform automated port discovery</li>
     <li>Detect known vulnerabilities using Nuclei</li>
@@ -61,4 +71,4 @@ Active Development
     <li>Troubleshooting triage_results.sh</li>
 </ul>
 
-</Layout></h1>
+</Layout>
